@@ -32,6 +32,11 @@ body {
   background: var(--bg);
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 .container {
   width: 90%;
   max-width: 1100px;
@@ -981,10 +986,18 @@ button:disabled {
 
 .custom-carousel {
   width: 100%;
+  max-width: 100%;
+  overflow: hidden;
   margin-top: 30px;
   display: flex;
   align-items: center;
   gap: 16px;
+}
+
+.custom-carousel-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .custom-carousel-viewport {
@@ -1034,11 +1047,11 @@ button:disabled {
 
 @media (max-width: 768px) {
   .custom-carousel {
-    gap: 8px;
+    gap: 4px;
   }
 
   .custom-carousel-slide {
-    padding: 0 4px;
+    padding: 0 2px;
   }
 
   .carousel-arrow {
