@@ -32,10 +32,10 @@ body {
   background: var(--bg);
 }
 
-html,
+/* html,
 body {
   overflow-x: hidden;
-}
+} */
 
 .container {
   width: 90%;
