@@ -541,15 +541,16 @@ p {
 }
 
 .contact-row span {
-   flex-basis: 100%;        /* ← esto lo baja a la siguiente línea siempre */
+  flex-basis: 100%;
   padding-left: 22px;
   overflow-wrap: anywhere;
   word-break: break-word;
 }
 
-@media (max-width: 768px) {
-  .contact-box p {
-    gap: 8px;
+@media (min-width: 769px) {
+  .contact-row span {
+    flex-basis: auto;
+    padding-left: 0;
   }
 }
 
