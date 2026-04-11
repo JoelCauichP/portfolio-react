@@ -773,8 +773,8 @@ button:disabled {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: scroll;
   overflow-x: clip;
+  background-attachment: fixed;
 }
 
 .cv-content {
@@ -1244,5 +1244,6 @@ button:disabled {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 }
