@@ -11,7 +11,7 @@ const projects = [
     description: "Sitio web especializada en asesoría académica, contable y fiscal con seguimiento personalizado.",
     tech: ["HTML", "CSS", "JavaScript"],
     link: "https://conafort.netlify.app/",
-    image: "/images/conacof-sitioweb.png",
+    image: "/images/conacof-sitioweb2.png",
   },
   {
     title: "SmartCV",
@@ -24,7 +24,7 @@ const projects = [
     title: "Plano Carnívoro",
     description: "Página web interactiva para amantes de la comida carnívora, con diseño moderno y experiencia de usuario optimizada.",
     tech: ["React", "JavaScript", "CSS", "HTML"],
-    link: "#",
+    link: "https://planocarnivoro.netlify.app/",
     image: "/images/planocarnivoro.png",
   },
 ];
