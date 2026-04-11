@@ -521,11 +521,34 @@ p {
 
 .contact-box p {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   margin-bottom: 12px;
   color: var(--text-soft);
   line-height: 1.7;
+  flex-wrap: wrap;
+}
+
+.contact-box p strong {
+  color: var(--dark);
+  flex-shrink: 0;
+}
+
+.contact-box p svg {
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.contact-box p a,
+.contact-box p span {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+  .contact-box p {
+    gap: 8px;
+  }
 }
 
 /* Redes */
