@@ -674,6 +674,12 @@ button:disabled {
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.tech-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 .tech-card:hover {
   transform: translateY(-5px);
