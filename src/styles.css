@@ -15,6 +15,14 @@
   --border: #e5e7eb;
 }
 
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
 /* Reset */
 * {
   margin: 0;
