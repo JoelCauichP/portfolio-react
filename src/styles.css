@@ -989,11 +989,10 @@ button:disabled {
 
 .custom-carousel {
   width: 100%;
-  max-width: 100%;
+  margin-top: 30px;
 }
 
 .custom-carousel-wrapper {
-  position: relative;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1003,22 +1002,23 @@ button:disabled {
 
 .custom-carousel-viewport {
   width: 100%;
-  max-width: 100%;
   overflow: hidden;
-  isolation: isolate;
 }
 
 .custom-carousel-track {
   display: flex;
   transition: transform 0.5s ease;
   will-change: transform;
-  transform: translateZ(0);
 }
 
 .custom-carousel-slide {
-  flex-shrink: 0;
   box-sizing: border-box;
   padding: 0 4px;
+  min-width: 0;
+}
+
+.custom-carousel-slide .project-card {
+  height: 100%;
 }
 
 .carousel-arrow {
@@ -1034,22 +1034,29 @@ button:disabled {
   flex-shrink: 0;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+.carousel-arrow:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 769px) {
   .custom-carousel {
-    overflow: visible;
+    margin-top: 30px;
   }
 
   .custom-carousel-wrapper {
-    gap: 6px;
+    gap: 16px;
   }
 
   .custom-carousel-slide {
-    padding: 0 2px;
+    padding: 0 12px;
+  }
+
+  .carousel-arrow {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    font-size: 1.2rem;
   }
 }
 
