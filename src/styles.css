@@ -20,7 +20,6 @@ body,
 #root {
   width: 100%;
   max-width: 100%;
-  overflow-x: clip;
 }
 
 /* Reset */
@@ -1006,12 +1005,14 @@ button:disabled {
   width: 100%;
   max-width: 100%;
   overflow: hidden;
+  isolation: isolate;
 }
 
 .custom-carousel-track {
   display: flex;
   transition: transform 0.5s ease;
   will-change: transform;
+  transform: translateZ(0);
 }
 
 .custom-carousel-slide {

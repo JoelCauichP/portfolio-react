@@ -51,7 +51,7 @@ function PortfolioCarousel({ projects }) {
             className="custom-carousel-track"
             style={{
               width: `${(projects.length / cardsPerView) * 100}%`,
-              transform: `translateX(-${currentIndex * (100 / cardsPerView)}%)`,
+              transform: `translateX(-${(currentIndex / projects.length) * 100}%)`,
             }}
           >
             {projects.map((project, index) => (
