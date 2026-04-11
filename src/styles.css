@@ -32,10 +32,6 @@ body {
   background: var(--bg);
 }
 
-/* html,
-body {
-  overflow-x: hidden;
-} */
 
 .container {
   width: 90%;
@@ -987,21 +983,20 @@ button:disabled {
 .custom-carousel {
   width: 100%;
   max-width: 100%;
-  overflow: hidden;
-  margin-top: 30px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
 }
 
 .custom-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   width: 100%;
   max-width: 100%;
-  overflow: hidden;
 }
 
 .custom-carousel-viewport {
   width: 100%;
+  max-width: 100%;
   overflow: hidden;
 }
 
@@ -1013,51 +1008,39 @@ button:disabled {
 
 .custom-carousel-slide {
   flex-shrink: 0;
-  padding: 0 12px;
   box-sizing: border-box;
-}
-
-.custom-carousel-slide .project-card {
-  height: 100%;
+  padding: 0 4px;
 }
 
 .carousel-arrow {
   border: none;
-  width: 46px;
-  height: 46px;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
   border-radius: 50%;
   background: var(--primary);
   color: var(--white);
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 1rem;
   flex-shrink: 0;
-  transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.carousel-arrow:hover {
-  background: var(--primary-dark);
-  transform: scale(1.05);
-}
-
-.carousel-arrow:disabled {
-  opacity: 0.45;
-  cursor: not-allowed;
-  transform: none;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 @media (max-width: 768px) {
   .custom-carousel {
-    gap: 4px;
+    overflow: visible;
+  }
+
+  .custom-carousel-wrapper {
+    gap: 6px;
   }
 
   .custom-carousel-slide {
     padding: 0 2px;
-  }
-
-  .carousel-arrow {
-    width: 40px;
-    height: 40px;
-    font-size: 1rem;
   }
 }
 

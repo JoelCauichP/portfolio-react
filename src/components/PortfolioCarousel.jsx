@@ -36,67 +36,69 @@ function PortfolioCarousel({ projects }) {
 
   return (
     <div className="custom-carousel">
-      <button
-        className="carousel-arrow"
-        onClick={goPrev}
-        aria-label="Proyecto anterior"
-        disabled={currentIndex === 0}
-      >
-        ←
-      </button>
-
-      <div className="custom-carousel-viewport">
-        <div
-          className="custom-carousel-track"
-          style={{
-            width: `${(projects.length / cardsPerView) * 100}%`,
-            transform: `translateX(-${currentIndex * (100 / projects.length)}%)`
-          }}
+      <div className="custom-carousel-wrapper">
+        <button
+          className="carousel-arrow"
+          onClick={goPrev}
+          aria-label="Proyecto anterior"
+          disabled={currentIndex === 0}
         >
-          {projects.map((project, index) => (
-            <div
-              className="custom-carousel-slide"
-              key={index}
-              style={{ width: `${100 / projects.length}%` }}
-            >
-              <div className="project-card">
-                <div className="project-image">
-                  <img src={project.image} alt={project.title} />
+          ←
+        </button>
+
+        <div className="custom-carousel-viewport">
+          <div
+            className="custom-carousel-track"
+            style={{
+              width: `${(projects.length / cardsPerView) * 100}%`,
+              transform: `translateX(-${currentIndex * (100 / cardsPerView)}%)`,
+            }}
+          >
+            {projects.map((project, index) => (
+              <div
+                className="custom-carousel-slide"
+                key={index}
+                style={{ width: `${100 / projects.length}%` }}
+              >
+                <div className="project-card">
+                  <div className="project-image">
+                    <img src={project.image} alt={project.title} />
+                  </div>
+
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+
+                  <div className="project-tech">
+                    {project.tech.map((item, i) => (
+                      <span key={i} className="tech-badge">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-secondary"
+                  >
+                    Ver proyecto
+                  </a>
                 </div>
-
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-
-                <div className="project-tech">
-                  {project.tech.map((item, i) => (
-                    <span key={i} className="tech-badge">
-                      {item}
-                    </span>
-                  ))}
-                </div>
-
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-secondary"
-                >
-                  Ver proyecto
-                </a>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
 
-      <button
-        className="carousel-arrow"
-        onClick={goNext}
-        aria-label="Siguiente proyecto"
-        disabled={currentIndex === maxIndex}
-      >
-        →
-      </button>
+        <button
+          className="carousel-arrow"
+          onClick={goNext}
+          aria-label="Siguiente proyecto"
+          disabled={currentIndex === maxIndex}
+        >
+          →
+        </button>
+      </div>
     </div>
   );
 }
