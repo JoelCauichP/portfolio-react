@@ -98,9 +98,21 @@ function Contact() {
             <div className="contact-info">
               <div className="contact-box">
                 <h3>Información de contacto</h3>
-                <p><FaEnvelope /> <strong>Correo:</strong> joel.cauich.2001@gmail.com</p>
-                <p><FaPhoneAlt /> <strong>Teléfono:</strong> +52 999 568 7291</p>
-                <p><FaMapMarkerAlt /> <strong>Ubicación:</strong> Mérida, Yucatán, México</p>
+                <div className="contact-row">
+                  <FaEnvelope />
+                  <strong>Correo:</strong>
+                  <span>joel.cauich.2001@gmail.com</span>
+                </div>
+                <div className="contact-row">
+                  <FaPhoneAlt />
+                  <strong>Teléfono:</strong>
+                  <span>+52 999 568 7291</span>
+                </div>
+                <div className="contact-row">
+                  <FaMapMarkerAlt />
+                  <strong>Ubicación:</strong>
+                  <span>Mérida, Yucatán, México</span>
+                </div>
               </div>
 
               <div className="contact-box">
