@@ -541,6 +541,8 @@ p {
 }
 
 .contact-row span {
+   flex-basis: 100%;        /* ← esto lo baja a la siguiente línea siempre */
+  padding-left: 22px;
   overflow-wrap: anywhere;
   word-break: break-word;
 }
