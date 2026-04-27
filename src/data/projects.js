@@ -27,6 +27,13 @@ const projects = [
     link: "https://planocarnivoro.netlify.app/",
     image: "/images/planocarnivoro.png",
   },
+  {
+    title: "Auth API con Laravel + JWT",
+    description: "API REST para autenticación de usuarios con registro, inicio de sesión, tokens JWT y protección de rutas. Incluye control de acceso por roles para restringir funciones administrativas.",
+    tech: ["Laravel", "PHP", "MySQL", "JWT"],
+    link: "https://github.com/JoelCauichP/auth-api-laravel-jwt.git",
+    image: "/images/auth_api.png",
+  },
 ];
 
 export default projects;
